@@ -3,17 +3,16 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Download, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  // CV file එකේ path එක define කරන්න
-  const cvPath = `${window.location.origin}/Anjana cv.pdf`;; // මේක නිකන් example එකක්, ඔබේ CV file එකේ නමට අනුව change කරන්න
-  
-  // CV download කරගන්න function එක
+  // ✅ Google Drive Link එක (ඔබේ file ID එකට change කරන්න)
+  const cvDriveLink = "https://drive.google.com/uc?export=download&id=1YOUR_FILE_ID_HERE";
+
+  // ✅ CV download කරගන්න function එක
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = cvPath;
-    link.download = "Anjana-CV.pdf"; // User ට download වෙන විට පෙනෙන නම
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Google Drive direct download link එක open කරන්න
+    window.open(cvDriveLink, '_blank');
+    
+    // Optional: Toast notification දෙන්න
+    alert("CV download එක start වෙලා තියෙනවා. නැත්නම් popup blocker disable කරන්න.");
   };
 
   return (
@@ -50,7 +49,7 @@ const Hero: React.FC = () => {
               View My Work <ExternalLink size={18} />
             </motion.a>
             
-            {/* Updated Download CV Button */}
+            {/* ✅ Updated Download CV Button - Google Drive වලින් */}
             <motion.button
               onClick={handleDownloadCV}
               whileHover={{ scale: 1.02 }}
