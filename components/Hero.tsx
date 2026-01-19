@@ -4,13 +4,13 @@ import { ChevronDown, Download, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
   // CV file එකේ path එක define කරන්න
-  const cvPath = "/images/Anjana-cv.pdf"; // මේක නිකන් example එකක්, ඔබේ CV file එකේ නමට අනුව change කරන්න
+  const cvPath = "/Anjana cv.pdf"; // මේක නිකන් example එකක්, ඔබේ CV file එකේ නමට අනුව change කරන්න
   
   // CV download කරගන්න function එක
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = cvPath;
-    link.download = "Hashan-Anjana-CV.pdf"; // User ට download වෙන විට පෙනෙන නම
+    link.download = "Anjana-CV.pdf"; // User ට download වෙන විට පෙනෙන නම
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
