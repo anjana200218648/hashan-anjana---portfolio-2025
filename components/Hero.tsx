@@ -4,15 +4,14 @@ import { ChevronDown, Download, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
   // ✅ Google Drive Link එක (ඔබේ file ID එකට change කරන්න)
-  const cvDriveLink = "https://drive.google.com/uc?export=download&id=1YOUR_FILE_ID_HERE";
+  const cvDriveLink = "https://drive.google.com/file/d/1VA0OAp4FIxowiI69NRRslhCnhs4wtmP3/view?usp=sharing";
 
   // ✅ CV download කරගන්න function එක
   const handleDownloadCV = () => {
     // Google Drive direct download link එක open කරන්න
     window.open(cvDriveLink, '_blank');
     
-    // Optional: Toast notification දෙන්න
-    alert("CV download එක start වෙලා තියෙනවා. නැත්නම් popup blocker disable කරන්න.");
+    
   };
 
   return (
