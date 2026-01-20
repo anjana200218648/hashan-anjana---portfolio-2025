@@ -4,7 +4,7 @@ import { ChevronDown, Download, ExternalLink } from 'lucide-react';
 
 const Hero: React.FC = () => {
   // ✅ Google Drive Link එක (ඔබේ file ID එකට change කරන්න)
-  const cvDriveLink = "https://drive.google.com/file/d/1VA0OAp4FIxowiI69NRRslhCnhs4wtmP3/view?usp=sharing";
+  const cvDriveLink = "https://drive.google.com/file/d/1qFaZv_PmvF6WMrK0mYkdSrksHWssYPzp/view?usp=sharing";
 
   // ✅ CV download කරගන්න function එක
   const handleDownloadCV = () => {
